@@ -1,0 +1,38 @@
+// ------Variables------//
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//------Enter Page------//
+.enter-background {
+    background-color: black;
+}
+
+.enter {
+    @include flexCenter();
+    font-size: 6rem;
+    color: darkgreen;
+    height: 70vh;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+a:hover {
+    color: deeppink;
+}
+
+h1 {
+    font-size: 4rem;
+    @include flexCenter();
+}
+
+//------Main Page------//
+.main-background {
+    background-color: gray;
+}
