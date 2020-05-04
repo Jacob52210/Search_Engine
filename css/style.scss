@@ -8,10 +8,9 @@ $transparent: rgba(0,0,0,0.3);
     align-items: center;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Courgette&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Black+Ops+One|Fugaz+One|Rock+Salt&display=swap);
 
-//------Enter Page------//
+//------Landing Page------//
 a {
     color: blue;
     text-decoration: none;
@@ -40,18 +39,28 @@ a {
     width: 100%;
 }
 
-//------Main Page------//
+//------Search Page------//
 header {
     color: $brightPurple;
     display: flex;
     justify-content: center;
     padding: 10px;
     margin: 0px;
+    font-family: 'Fugaz One', cursive;
+    flex: 1;
 }
 
 h1 {
     @include flexCenter();
-    
+    font-family: 'Fugaz One', cursive;
+}
+
+.holding-container {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 .main-background {
@@ -62,12 +71,13 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.wrapper {
+.search-bar {
     width: 100%;
     height: 100vh;
     background-size: cover;
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 
 .search-box {
@@ -110,4 +120,97 @@ i:hover {
     right: 25px;
     color: purple;
     font-size: 25px;
+}
+
+//------Media Queries------//
+
+
+@media screen and (min-width: 1000px) {
+
+    //---Landing Page---//
+    .section h1 {
+        text-align: center;
+        font-family: 'Black Ops One', cursive;
+        font-size: 6rem;
+        z-index: 1;
+    }
+
+    //---Search Page---//
+    .holding-container {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .search-bar {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: flex-start;
+        flex: 1;
+    }
+
+    .search-box {
+        width: 400px;
+        position: relative;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        font-family: 'Fugaz One', cursive;
+        font-size: 40px;
+        padding: 0;
+        line-height: 5px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    //---Landing Page---//
+    .section h1 {
+        text-align: center;
+        font-family: 'Black Ops One', cursive;
+        font-size: 8rem;
+        z-index: 1;
+    }
+
+    //---Search Page---//
+    .holding-container {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .search-bar {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: flex-start;
+        flex: 1;
+    }
+
+    .search-box {
+        width: 600px;
+        position: relative;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        font-family: 'Fugaz One', cursive;
+        font-size: 60px;
+        padding: 0;
+        line-height: 5px;
+    }
 }
