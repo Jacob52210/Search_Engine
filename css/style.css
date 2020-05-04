@@ -18,16 +18,24 @@
 }
 
 a {
+  color: darkred;
   text-decoration: none;
   background-color: yellow;
   padding: 0;
 }
 
-body {
-  background-image: url(../img//lightning.jpg);
-  width: auto;
-  height: 100vh;
-  background-size: cover;
+header {
+  color: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +45,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main-background {
+  background-image: url(../img//lightning.jpg);
+  width: auto;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -49,14 +65,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .search-box {
-  width: 50%;
+  width: 300px;
   position: relative;
+}
+
+i:hover {
+  color: #ff02ff;
+}
+
+input {
+  background-color: purple;
 }
 
 .search-box input[type="text"] {
@@ -71,6 +92,7 @@ body {
   color: #ff02ff;
   font-size: 18px;
   outline: none;
+  top: 20%;
 }
 
 ::-webkit-input-placeholder {
@@ -79,7 +101,7 @@ body {
 
 .fa-search {
   position: absolute;
-  top: 50%;
+  top: 3.5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 25px;
