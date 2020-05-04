@@ -30,14 +30,16 @@ a {
 
 //------Main Page------//
 header {
-    color: purple;
+    color: $brightPurple;
     display: flex;
     justify-content: center;
-    background-color: black;
+    padding: 10px;
+    margin: 0px;
 }
 
 h1 {
-    @include flexCenter()
+    @include flexCenter();
+    
 }
 
 .main-background {
@@ -45,12 +47,11 @@ h1 {
     width: auto;
     height: 100vh;
     background-size: cover;
-    
     background-repeat: no-repeat;
 }
 
 .wrapper {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -92,7 +93,7 @@ i:hover {
 
 .fa-search {
     position: absolute;
-    top: 3.5%;
+    top: 4.5%;
     transform: translateY(-50%);
     right: 25px;
     color: purple;
