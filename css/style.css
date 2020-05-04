@@ -76,13 +76,10 @@ i:hover {
   color: #ff02ff;
 }
 
-input {
-  background-color: purple;
-}
-
 .search-box input[type="text"] {
   width: 100%;
   padding: 20px;
+  margin-top: 10px;
   padding-right: 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -93,6 +90,10 @@ input {
   font-size: 18px;
   outline: none;
   top: 20%;
+}
+
+.search-box input[type="text"]:hover {
+  border: 2px solid #ff02ff;
 }
 
 ::-webkit-input-placeholder {
