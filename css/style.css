@@ -1,7 +1,5 @@
-.enter-background {
-  background-color: black;
-}
-
+@import url(https://fonts.googleapis.com/css?family=Courgette&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap);
 .enter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,22 +10,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 6rem;
-  color: darkgreen;
-  height: 70vh;
+  position: relative;
+  line-height: 80vh;
+  font-family: 'Black Ops One', cursive;
+  font-size: 90px;
+  color: red;
+  background-color: royalblue;
 }
 
 a {
   text-decoration: none;
-  color: darkgreen;
 }
 
-a:hover {
-  color: deeppink;
-}
-
-h1 {
-  font-size: 4rem;
+.wrapper {
+  background-image: url(../img//lightning.jpg);
+  width: auto;
+  height: 100vh;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +38,26 @@ h1 {
           align-items: center;
 }
 
-.main-background {
-  background-color: gray;
+.search-box {
+  width: 50%;
+  position: relative;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  padding-right: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid purple;
+  border-radius: 50px;
+  color: #ff02ff;
+  font-size: 18px;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: purple;
 }
 /*# sourceMappingURL=style.css.map */
