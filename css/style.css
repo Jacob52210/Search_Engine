@@ -103,7 +103,7 @@ i:hover {
 
 .fa-search {
   position: absolute;
-  top: 4.5%;
+  top: 40px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 25px;
