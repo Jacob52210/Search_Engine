@@ -25,7 +25,7 @@ a {
     overflow: hidden;
 }
 
-.section h1 {
+.enter {
     text-align: center;
     font-family: 'Black Ops One', cursive;
     font-size: 4rem;
@@ -44,7 +44,7 @@ header {
     color: $brightPurple;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
     font-family: 'Fugaz One', cursive;
     flex: 1;
@@ -53,14 +53,15 @@ header {
 h1 {
     @include flexCenter();
     font-family: 'Fugaz One', cursive;
+    font-size: 25px;
+    line-height: 10px;
 }
 
 .holding-container {
     width: 100%;
     display: flex;
-    padding: 20px;
-    box-sizing: border-box;
     flex-direction: column;
+    padding-top: 10px;
 }
 
 .main-background {
@@ -91,7 +92,7 @@ i:hover {
 
 .search-box input[type="text"] {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     margin-top: 10px;
     padding-right: 60px;
     box-sizing: border-box;
@@ -99,7 +100,7 @@ i:hover {
     border: 2px solid purple;
     border-radius: 50px;
     color: rgb(255, 2, 255);
-    font-size: 18px;
+    font-size: 15px;
     outline: none;
     top: 20%;
 }
@@ -115,7 +116,7 @@ i:hover {
 
 .fa-search {
     position: absolute;
-    top: 40px;
+    top: 30px;
     transform: translateY(-50%);
     right: 25px;
     color: purple;
@@ -123,94 +124,90 @@ i:hover {
 }
 
 //------Media Queries------//
+@media screen and (min-width: 320px) {
+
+    //---Landing Page---//
+    .enter {
+        font-size: 5rem;
+    }
+
+    //---Search Page---//
+    .search-box input[type="text"] {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .fa-search {
+        top: 40px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 10px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+
+    //---Landing Page---//
+    .enter {
+        font-size: 6rem;
+    }
+
+    //---Search Page---//
+    .holding-container {
+        flex-direction: row;
+    }
+
+    h1 {
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
 
 
 @media screen and (min-width: 1000px) {
 
     //---Landing Page---//
-    .section h1 {
-        text-align: center;
-        font-family: 'Black Ops One', cursive;
-        font-size: 6rem;
-        z-index: 1;
+    .enter {
+        font-size: 7rem;
     }
 
     //---Search Page---//
     .holding-container {
-        width: 100%;
-        display: flex;
-        padding: 10px;
-        box-sizing: border-box;
+        padding-top: 20px;
         flex-direction: row;
-        justify-content: space-around;
     }
 
-    .search-bar {
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        display: flex;
-        align-items: flex-start;
-        flex: 1;
-    }
-
+    
     .search-box {
         width: 400px;
         position: relative;
     }
 
     h1 {
-        display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        font-family: 'Fugaz One', cursive;
-        font-size: 40px;
-        padding: 0;
-        line-height: 5px;
+        font-size: 50px;
+        line-height: 20px;
     }
 }
 
 @media screen and (min-width: 1500px) {
 
     //---Landing Page---//
-    .section h1 {
-        text-align: center;
-        font-family: 'Black Ops One', cursive;
+    .enter {
         font-size: 8rem;
-        z-index: 1;
     }
 
     //---Search Page---//
-    .holding-container {
-        width: 100%;
-        display: flex;
-        padding: 10px;
-        box-sizing: border-box;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .search-bar {
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        display: flex;
-        align-items: flex-start;
-        flex: 1;
-    }
-
     .search-box {
         width: 600px;
-        position: relative;
     }
 
     h1 {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        font-family: 'Fugaz One', cursive;
         font-size: 60px;
-        padding: 0;
-        line-height: 5px;
+        line-height: 15px;
     }
 }
