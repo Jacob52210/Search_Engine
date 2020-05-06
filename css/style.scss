@@ -46,6 +46,54 @@ a {
 }
 
 //------Search Page------//
+.top-container {
+    padding: 5px;
+    text-align: center;
+    flex-direction: column;
+    margin: -10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid purple;
+    position: sticky;
+    top: 0;
+}
+
+h2 {
+    color: $brightPurple;
+    font-size: 35px;
+    font-family: "Rock Salt";
+    margin: -1px;
+    padding-top: 20px;
+}
+
+    //---Nav Bar---//
+nav {
+    color: $brightPurple;
+    flex-direction: row;
+    color: $brightPurple!important;
+    
+}
+
+ul {
+    @include flexCenter();
+    margin: -1px;
+    padding-right: 40px;
+    list-style: none;
+}
+
+ul li a{
+    margin-left: 20px;
+    margin-right: 20px;
+    @include flexCenter();
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    color: purple;
+}
+
+ul li a:hover {
+    color: $brightPurple;
+}
+
 header {
     color: $brightPurple;
     display: flex;
@@ -169,6 +217,14 @@ i:hover {
     }
 
     //---Search Page---//
+    .top-container {
+        flex-direction: row;
+    }
+
+    h2 {
+        flex-direction: row;
+    }
+
     .holding-container {
         flex-direction: row;
     }
