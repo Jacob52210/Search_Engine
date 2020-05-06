@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Black+Ops+One|Fugaz+One|Rock+Salt&display=swap);
 a {
-  color: blue;
   text-decoration: none;
   padding: 0;
 }
@@ -21,11 +20,19 @@ a {
   overflow: hidden;
 }
 
-.enter {
+.enter a {
   text-align: center;
+  color: blue;
   font-family: 'Black Ops One', cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   z-index: 1;
+}
+
+.enter a:hover {
+  color: darkblue;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 4rem;
 }
 
 .video-container {
@@ -145,8 +152,11 @@ i:hover {
 }
 
 @media screen and (min-width: 320px) {
-  .enter {
+  .enter a {
     font-size: 5rem;
+  }
+  .enter a:hover {
+    font-size: 6rem;
   }
   .search-box input[type="text"] {
     padding: 20px;
@@ -162,8 +172,11 @@ i:hover {
 }
 
 @media screen and (min-width: 720px) {
-  .enter {
+  .enter a {
     font-size: 6rem;
+  }
+  .enter a:hover {
+    font-size: 7rem;
   }
   .holding-container {
     -webkit-box-orient: horizontal;
@@ -185,8 +198,11 @@ i:hover {
 }
 
 @media screen and (min-width: 1000px) {
-  .enter {
+  .enter a {
     font-size: 7rem;
+  }
+  .enter a:hover {
+    font-size: 8rem;
   }
   .holding-container {
     padding-top: 20px;
@@ -210,8 +226,11 @@ i:hover {
 }
 
 @media screen and (min-width: 1500px) {
-  .enter {
+  .enter a {
     font-size: 8rem;
+  }
+  .enter a:hover {
+    font-size: 9rem;
   }
   .search-box {
     width: 600px;
