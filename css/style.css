@@ -51,7 +51,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: black;
   border-bottom: 2px solid purple;
   position: -webkit-sticky;
   position: sticky;
@@ -63,7 +63,7 @@ h2 {
   color: #ff02ff;
   font-size: 35px;
   font-family: "Rock Salt";
-  margin: -1px;
+  margin: 0px;
   padding-top: 20px;
 }
 
@@ -92,7 +92,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: -1px;
+  margin: 0px;
   padding-right: 40px;
   list-style: none;
 }
@@ -171,7 +171,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
-  margin: -1px;
+  margin: 0px;
 }
 
 .search-bar {

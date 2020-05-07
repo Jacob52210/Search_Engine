@@ -53,7 +53,7 @@ a {
     padding: 5px;
     text-align: center;
     flex-direction: column;
-    background-color:$transparent;
+    background-color:black;
     border-bottom: 2px solid purple;
     position: sticky;
     top: 0;
@@ -64,7 +64,7 @@ h2 {
     color: $brightPurple;
     font-size: 35px;
     font-family: "Rock Salt";
-    margin: -1px;
+    margin: 0px;
     padding-top: 20px;
 }
 //-----------------------------------------------------------Remove this code for "Fake Content"-------------------------------------------------//
@@ -87,7 +87,7 @@ nav {
 
 ul {
     @include flexCenter();
-    margin: -1px;
+    margin: 0px;
     padding-right: 40px;
     list-style: none;
 }
@@ -141,7 +141,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-    margin: -1px;
+    margin: 0px;
    
 }
 
