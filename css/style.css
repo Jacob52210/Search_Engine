@@ -55,6 +55,7 @@ a {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 h2 {
@@ -156,7 +157,7 @@ h1 {
 
 .main-background {
   background-image: url(../img//lightning.jpg);
-  width: auto;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -227,6 +228,12 @@ i:hover {
   .enter a:hover {
     font-size: 6rem;
   }
+  h2 {
+    font-size: 45px;
+  }
+  ul li a {
+    font-size: 35px;
+  }
   .search-box input[type="text"] {
     padding: 20px;
     font-size: 18px;
@@ -248,16 +255,46 @@ i:hover {
     font-size: 7rem;
   }
   .top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .site-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   h2 {
+    padding-top: 0px;
+    padding-left: 20px;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    float: right;
   }
   .holding-container {
     -webkit-box-orient: horizontal;
@@ -284,6 +321,12 @@ i:hover {
   }
   .enter a:hover {
     font-size: 8rem;
+  }
+  h2 {
+    font-size: 55px;
+  }
+  ul li a {
+    font-size: 45px;
   }
   .holding-container {
     padding-top: 20px;

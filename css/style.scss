@@ -55,6 +55,7 @@ a {
     border-bottom: 2px solid purple;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 h2 {
@@ -120,7 +121,7 @@ h1 {
 
 .main-background {
     background-image: url(../img//lightning.jpg);
-    width: auto;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -133,6 +134,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex: 1;
+    
 }
 
 .search-box {
@@ -142,6 +144,7 @@ h1 {
 
 i:hover {
     color: $brightPurple;
+    
 }
 
 .search-box input[type="text"] {
@@ -161,6 +164,7 @@ i:hover {
 
 .search-box input[type="text"]:hover {
     border: 2px solid $brightPurple;
+    
 }
 
 ::-webkit-input-placeholder {
@@ -190,6 +194,14 @@ i:hover {
     }
 
     //---Search Page---//
+    h2 {
+        font-size: 45px;
+    }
+
+    ul li a {
+        font-size: 35px;
+    }
+
     .search-box input[type="text"] {
         padding: 20px;
         font-size: 18px;
@@ -218,11 +230,28 @@ i:hover {
 
     //---Search Page---//
     .top-container {
+        display: flex;
         flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .site-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     h2 {
+        padding-top: 0px;
+        padding-left: 20px;
+    }
+
+    nav {
+        display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        float: right;
     }
 
     .holding-container {
@@ -250,6 +279,14 @@ i:hover {
     }
 
     //---Search Page---//
+    h2 {
+        font-size: 55px;
+    }
+
+    ul li a {
+        font-size: 45px;
+    }
+
     .holding-container {
         padding-top: 20px;
         flex-direction: row;
