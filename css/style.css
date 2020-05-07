@@ -2,6 +2,7 @@
 a {
   text-decoration: none;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .section {
@@ -26,6 +27,7 @@ a {
   font-family: 'Black Ops One', cursive;
   font-size: 3rem;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .enter a:hover {
@@ -79,7 +81,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #ff02ff !important;
 }
 
 ul {
