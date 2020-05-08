@@ -4,9 +4,9 @@
 ___
 # User Stories
 ### One
-*I am an employer looking for a developer who can make search engines.*
+*As an employer, I want to find a developer who can make search engines so that I can have a dynamic website.*
 ### Two
-*I am someone who wants the latest gifs for my social media.*
+*As a social media user, I want to stay updated on the latest gifs so that I can be one of the first to share them.*
 ___
 # Technologies Used
 * HTML
@@ -15,6 +15,6 @@ ___
 * jQuery
 ___
 # Future Improvements
+* Hamburger menu for small screens.
 * 
-*
 *
