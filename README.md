@@ -16,5 +16,5 @@ ___
 ___
 # Future Improvements
 * Hamburger menu for small screens.
-* 
-*
+* Link to website for videos instead of downloading to speed up page rendering.
+* Link to website for large images instead of downloading to speed up page rendering.
