@@ -69,12 +69,6 @@ h2 {
   padding-top: 20px;
 }
 
-article {
-  font-size: 1em;
-  color: #ff02ff;
-  text-align: center;
-}
-
 nav {
   color: #ff02ff;
   -webkit-box-orient: horizontal;
@@ -235,6 +229,10 @@ i:hover {
   font-size: 25px;
 }
 
+.error {
+  color: red;
+}
+
 @media screen and (min-width: 320px) {
   .enter a {
     font-size: 5rem;
@@ -327,6 +325,10 @@ i:hover {
     font-size: 35px;
     line-height: 40px;
   }
+}
+
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 1000px) {
