@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Selecting DOM elements.
     const submitElement = document.querySelector('.js-form');
     const inputElement = document.querySelector('.js-input');
+    const inputNumElement = document.querySelector('.js-input-num');
     const container = document.querySelector('.js-container');
     const searchIcon = document.querySelector('.js-icon');
 
@@ -36,9 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         `;
     }
 
-    // Event Listener
-    submitElement.addEventListener('submit', loadData);
-    searchIcon.addEventListener('click', loadData);
+    
 
     function loadData(event) {
         // Retrieving User Input
@@ -48,11 +47,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // Prevent Page from reloading
         event.preventDefault();
         // Inputing data objects from JSON data array.
-        inputValue = document.querySelector('[data=url]').value;
+        inputValue = document.querySelector('[data]').value;
         // Fetching the concantinated URL.
         fetch(newUrl)
             .then( convertResponseToJson )
             .then( processJsonResponse )
             .catch( errorHandling );
     }
+
+    // Event Listener
+    submitElement.addEventListener('submit', loadData);
+    searchIcon.addEventListener('click', loadData);
 });

@@ -195,7 +195,7 @@ i:hover {
   color: #ff02ff;
 }
 
-.search-box input[type="text"] {
+.search-box input {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -211,7 +211,7 @@ i:hover {
   top: 20%;
 }
 
-.search-box input[type="text"]:hover {
+.search-box input:hover {
   border: 2px solid #ff02ff;
 }
 
@@ -231,6 +231,7 @@ i:hover {
 
 .error {
   color: red;
+  font-size: 3rem;
 }
 
 @media screen and (min-width: 320px) {
@@ -246,7 +247,7 @@ i:hover {
   ul li a {
     font-size: 35px;
   }
-  .search-box input[type="text"] {
+  .search-box input {
     padding: 20px;
     font-size: 18px;
   }
@@ -323,12 +324,8 @@ i:hover {
         -ms-flex-align: start;
             align-items: flex-start;
     font-size: 35px;
-    line-height: 40px;
+    line-height: 120px;
   }
-}
-
-.error {
-  color: red;
 }
 
 @media screen and (min-width: 1000px) {
@@ -361,7 +358,7 @@ i:hover {
         -ms-flex-direction: row;
             flex-direction: row;
     font-size: 50px;
-    line-height: 20px;
+    line-height: 100px;
   }
 }
 
@@ -377,7 +374,7 @@ i:hover {
   }
   h1 {
     font-size: 60px;
-    line-height: 15px;
+    line-height: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */

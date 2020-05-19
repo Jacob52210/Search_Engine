@@ -157,7 +157,7 @@ i:hover {
     
 }
 
-.search-box input[type="text"] {
+.search-box input {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -172,7 +172,9 @@ i:hover {
     top: 20%;
 }
 
-.search-box input[type="text"]:hover {
+
+
+.search-box input:hover {
     border: 2px solid $brightPurple;
     
 }
@@ -193,6 +195,7 @@ i:hover {
 
 .error {
     color: red;
+    font-size: 3rem;
 }
 
 //------Media Queries------//
@@ -216,7 +219,7 @@ i:hover {
         font-size: 35px;
     }
 
-    .search-box input[type="text"] {
+    .search-box input {
         padding: 20px;
         font-size: 18px;
     }
@@ -276,15 +279,9 @@ i:hover {
         flex-direction: row;
         align-items: flex-start;
         font-size: 35px;
-        line-height: 40px;
+        line-height: 120px;
     }
 }
-
-//-----JS CSS------//
-.error {
-    color: red;
-}
-
 
 @media screen and (min-width: 1000px) {
 
@@ -320,7 +317,7 @@ i:hover {
     h1 {
         flex-direction: row;
         font-size: 50px;
-        line-height: 20px;
+        line-height: 100px;
     }
 }
 
@@ -342,6 +339,6 @@ i:hover {
 
     h1 {
         font-size: 60px;
-        line-height: 15px;
+        line-height: 80px;
     }
 }
