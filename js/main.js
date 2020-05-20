@@ -1,66 +1,45 @@
-// Load DOM before scripts.
+const searchForm = document.getElementById('search-form')
+const searchInput = document.getElementById('search-input')
+const resultsEl = document.getElementById('results')
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-  
-    // url        JSON data for a rainbow search: http://api.giphy.com/v1/gifs/search?api_key=9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO&q=rainbow&limit=5
+searchForm.addEventListener('submit', function(e) {
+    e.preventDefault()
+    const q = searchInput.value
+    search(q)
+})
 
-    const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO";
-    const url = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}`;
+function search(q) {
+    const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO"
+    const path = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}`
 
-    // Selecting DOM elements.
-    const submit = document.querySelector('.js-form');
+ //---------------------Error Handling------------------------------//
+   
 
-    /* input variables */
-    const inputSearch = document.querySelector('.js-input');
-    const inputNum = document.querySelector('.js-input-num');
-    const container = document.querySelector('.js-container');
-    const searchIcon = document.querySelector('.js-icon');
+ //---------------Fetching and Converting Data----------------------//
+    fetch(path).then(function(res) {  
+       return res.json()
+    }).then(function(json) {
+        console.log(json.data[0].images.fixed_width.url)
+        
+        let resultsHTML = ''
 
-    let inputValue = '';
+        json.data.forEach(function(obj) {
+            console.log(obj);
 
-    function convertResponseToJson( response ) {
+            const url =  obj.images.fixed_width.url
+            const width = obj.images.fixed_width.width
+            const height = obj.images.fixed_width.height
+            const alt = obj.title;
 
-        return response.json();
-    }
+            resultsHTML += `<img src="${url}" 
+                             width="${width}" 
+                             height="${height}" 
+                             alt="${alt}"
+                             >`
+        })
 
-    /* data/images/original/url */
-    function processJsonResponse( data ) {
-        console.log(data);
-        let markup = `<li>${inputValue}</li>`;
-        for (const images of data) {
-            markup = markup + `
-            <li>${images.original.url}
-            `;
-        }
-        container.innerHTML = markup;
-
-     
-    }
-    // Error handling
-    function errorHandling() {
-        container.innerHTML = `
-        <li class="error">Error loading data. Make sure your network is on.</li>
-        `;
-    }
-
-    // Event Listener
-    submit.addEventListener('submit', loadData);
-    searchIcon.addEventListener('click', loadData);
-    
-    function loadData(event) {
-        // Retrieving User Input
-        const value = ('&q=' + inputSearch.value) + ('&limit=' + inputNum.value);
-        // Creating New URL by concantinating API URL and user input.
-        const newUrl = url + value;
-        // Prevent Page from reloading
-        event.preventDefault();
-        // Inputing data objects from JSON data array.
-        inputValue = document.querySelector('.js-container').value;
-        // Fetching the concantinated URL.
-        fetch(newUrl)
-            .then(processJsonResponse)
-            .then(convertResponseToJson)
-            .catch(errorHandling);
-        console.log('Dynamic URL is ',newUrl)
-    }    
-});
+        resultsEl.innerHTML = resultsHTML
+    }).catch(function(err) {
+        console.log(err.message)
+    });
+}
