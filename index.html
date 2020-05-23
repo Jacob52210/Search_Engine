@@ -12,8 +12,9 @@
             <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        
         <nav class="navbar navbar-expand-sm navbar-light">
-            <a class="navbar-brand" href="#">Jake's Gifs</a>
+            <a class="navbar-brand" href="index.html">Jake's Gifs</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,23 +26,23 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Top</a>
-                            <a class="dropdown-item" href="#">Footer</a>
+                            <a class="dropdown-item" href="#bottom">Bottom</a>
                         </div>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" id="search-form">
-                    <input class="form-control mr-sm-2" id="search-input" type="text" placeholder="Search...">
-                    <input class="form-control mr-sm-2" id="search-num" type="number" placeholder="How Many... (25 By Default)">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2 my-input" id="search-input" type="text" placeholder="Search...">
+                    <input class="form-control mr-sm-2 my-input" id="search-num" type="number" placeholder="How Many... (25 By Default)">
+                    <button class="btn btn-outline-success my-2 my-sm-0 my-btn" type="submit">Search</button>
                 </form>
             </div>
         </nav>
-
+    
         <div id="results" class="results">
                 <!--   Search Results Displayed Here   -->
         </div>
-    
-
+            
+        <div id="bottom"></div>
     <!-- Optional JavaScript -->
     <script src="js/main.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
