@@ -1,10 +1,10 @@
-//-------------------Creating Variables-----------------------------//
+
 const searchForm = document.querySelector('.js-search-form');
 const searchInput = document.querySelector('.js-search-input');
 const resultsEl = document.querySelector('.js-results');
 const searchNum = document.querySelector('.js-search-num');
 
-//-----------------Restricting Text Input---------------------------//
+
 function lettersAndNumbersOnly(input) {
     var regex = /[^a-z,0-9,-, ]/gi;
     input.value = input.value.replace(regex, "");
@@ -15,7 +15,7 @@ function numbersOnly(input) {
     input.value = input.value.replace(regex, "");
 }
 
-//---------------------Event Listener-------------------------------//
+
 searchForm.addEventListener('submit', function(e) {
     e.preventDefault()
     const q = searchInput.value;
@@ -24,21 +24,19 @@ searchForm.addEventListener('submit', function(e) {
     
 });
 
-//-----------------Concantinating Dynamic URL-----------------------//
+
 function search(q, limit) {
     const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO";
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=${limit}`;
     
- //---------------------Error Handling------------------------------//
+ 
     function errorHandling() {
         resultsEl.innerHTML = `
             <h3 class="error">Error loading data, make sure your network is on.</h>
         `;
     }
 
- //---------------Fetching and Converting Data----------------------//
-
-            // Showing I can write functions inside a promise.
+ 
         
     fetch(path)
         .then(function(res) {  
@@ -72,7 +70,7 @@ function search(q, limit) {
         resultsEl.innerHTML = resultsHTML
     })
 
-            // Showing I can write the function elsewhere and invoke it in the promise.
+            
 
         .catch( errorHandling )
         };

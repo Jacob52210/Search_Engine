@@ -1,4 +1,3 @@
-//----------------- Mixins & Variables ------------------//
 @mixin column-center {
     display: flex;
     flex-direction: column;
@@ -23,7 +22,8 @@ $nav-bg-color: red;
 $box-shadow: rgba(255, 255, 255, 1);
 $body-bg-color: rgb(77, 1, 1);
 $see-through-blue: rgb(0, 217, 255);
-//----------------------- Styles ------------------------//
+
+
 figcaption {
     color: red;
     font-size: 15px;
@@ -144,7 +144,7 @@ body {
 
 
 
-//-------------------- Media Queries---------------------//
+
 @media screen and ( min-width: 320px ) {
     .my-form {
         display: flex;
