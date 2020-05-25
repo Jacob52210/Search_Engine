@@ -57,13 +57,16 @@ function search(q, limit) {
                 const height = obj.images.fixed_width.height
                 const alt = obj.title;
 
-                resultsHTML += `<img 
-                                class="items"
-                                src="${url}" 
-                                width="${width}" 
-                                height="${height}" 
-                                alt="${alt}"
-                                >`
+                resultsHTML += `
+                <div class="box">
+                    <div class="content">
+                        <figure>
+                            <img src="${url}" width="${width}" height="${height}" alt="${alt}">
+                            <figcaption>${alt}</figcatpion>
+                        </figure>
+                    </div>
+                </div>
+                `
             })
 
         resultsEl.innerHTML = resultsHTML

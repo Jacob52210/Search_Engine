@@ -24,7 +24,11 @@ $box-shadow: rgba(255, 255, 255, 1);
 $body-bg-color: rgb(77, 1, 1);
 $see-through-blue: rgb(0, 217, 255);
 //----------------------- Styles ------------------------//
-
+figcaption {
+    color: red;
+    font-size: 15px;
+    font-family: 'Chelsea Market', cursive;
+}
 
 a:hover {
     text-decoration: none;
@@ -35,7 +39,18 @@ body {
     background-color: $body-bg-color;
 }
 
+.body-content {
+    text-align: center;
+    color: red;
+    font-family: 'Chelsea Market', cursive;
+}
 
+
+
+.body-content img {
+    height: 100px;
+    width: auto;
+}
 
 .my-logo {
     color:black;
@@ -55,18 +70,32 @@ body {
 }
 
 .results {
+    z-index: -1;
     @include column-center();
-    columns: 1;
     padding-top: 5px;
-    margin: auto;
+    display: grid;
+    position: relative;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(300px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
 }
 
-.items {
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding-top: 7px;
+.results .box {
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.container .box img {
+    position: relative;
+    max-width: 200px;
+    margin-bottom: 10px;
 }
 
 .navbar {
@@ -107,8 +136,6 @@ body {
     padding: 0px;
 }
 
-
-
 .dropdown-item:hover {
     background-color: black;
     color: red;
@@ -119,17 +146,6 @@ body {
 
 //-------------------- Media Queries---------------------//
 @media screen and ( min-width: 320px ) {
-    .results {
-        columns: 2;
-        display: inline;
-        margin: auto;
-    }
-
-    .items {
-        width: 300px;
-        height: auto;
-    }
-
     .my-form {
         display: flex;
         flex-direction: column;
@@ -141,17 +157,6 @@ body {
 }
 
 @media screen and (min-width: 575px) {
-    .results {
-        columns: 2;
-        display: flex;
-        margin: auto;
-    }
-
-    .items {
-        width: 300px;
-        height: auto;
-    }
-
     .my-form {
         display: flex;
         flex-direction: row;
@@ -163,17 +168,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .results {
-        columns: 2;
-        display: inline;
-        margin: auto;
-    }
-
-    .items {
-        width: 300px;
-        height: auto;
-    }
-
     .my-form {
         display: flex;
         flex-direction: row;
