@@ -1,8 +1,8 @@
 //-------------------Creating Variables-----------------------------//
-const searchForm = document.getElementById('search-form');
-const searchInput = document.getElementById('search-input');
-const resultsEl = document.getElementById('results');
-const searchNum = document.getElementById('search-num');
+const searchForm = document.querySelector('.js-search-form');
+const searchInput = document.querySelector('.js-search-input');
+const resultsEl = document.querySelector('.js-results');
+const searchNum = document.querySelector('.js-search-num');
 
 //-----------------Restricting Text Input---------------------------//
 function lettersAndNumbersOnly(input) {

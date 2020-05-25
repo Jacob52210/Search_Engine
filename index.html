@@ -5,16 +5,18 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="css/style.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        <!-- Style Sheet -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
         <nav class="navbar navbar-expand-sm navbar-light">
-            <a class="navbar-brand" href="index.html">Jake's Gifs</a>
+            <a class="my-logo" href="index.html">Jake's Gifs</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +24,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown my-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Top</a>
@@ -30,15 +32,15 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="search-form">
-                    <input class="form-control mr-sm-2 my-input" id="search-input" type="text" placeholder="Search..." onkeyup="lettersAndNumbersOnly(this)">
-                    <input class="form-control mr-sm-2 my-input" id="search-num" type="text" placeholder="How Many... (25 By Default)" onkeyup="numbersOnly(this)">
-                    <button class="btn btn-outline-success my-2 my-sm-0 my-btn" type="submit">Search</button>
+                <form class=" my-form js-search-form">
+                    <input class="my-input js-search-input" type="text" name="search" placeholder="Search..." onkeyup="lettersAndNumbersOnly(this)">
+                    <input class=" my-input js-search-num" type="text" name="num" placeholder="Quantity...(Default 25)" onkeyup="numbersOnly(this)">
+                    <button class="btn  my-2 my-sm-0 my-btn" type="submit">Search</button>
                 </form>
             </div>
         </nav>
     
-        <div id="results" class="results">
+        <div class="results js-results">
                 <!--   Search Results Displayed Here   -->
         </div>
 

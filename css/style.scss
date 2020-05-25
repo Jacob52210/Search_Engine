@@ -19,11 +19,36 @@
     align-items: center;
 }
 
-$nav-bg-color: rgba(173, 216, 230, 1);
-$box-shadow: rgba(0, 0, 0, 0.3);
-$border-box: blue;
-
+$nav-bg-color: red;
+$box-shadow: rgba(255, 255, 255, 1);
+$body-bg-color: rgb(77, 1, 1);
+$see-through-blue: rgb(0, 217, 255);
 //----------------------- Styles ------------------------//
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: $body-bg-color;
+}
+
+
+
+.my-logo {
+    color:black;
+    padding-right: 20px;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 30px;
+}
+
+.my-logo:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .error {
     text-align: center;
     color: red;
@@ -38,34 +63,59 @@ $border-box: blue;
 
 .items {
     margin: 5px;
-    box-shadow: 3px 3px $box-shadow;
-    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 7px;
 }
 
 .navbar {
     background-color: $nav-bg-color;
-    box-shadow: 0px 1px $border-box;
     position: sticky;
     top: 0px;
 }
 
-.my-input {
-    border: 1px solid blue ;
-    margin: 5px;
-}
-
-.my-input:hover {
-    border-color: blue;
-}
-
 .my-btn {
-    border-color: blue;
-    color: blue;
+    margin: 5px;
+    color: red;
+    background-color: black;
+    border: none;
+    width: 100%;
 }
 
 .my-btn:hover {
-    background-color: blue;
+    color: black;
+    font-weight: bold;
+    background-color: red;
+    border: 2px solid black;
+    transition: .5s;
 }
+
+.my-input {
+    margin: 5px;
+    width: 100%;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.my-input:hover {
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+.dropdown-menu {
+    padding: 0px;
+}
+
+
+
+.dropdown-item:hover {
+    background-color: black;
+    color: red;
+    transition: .5s;
+}
+
+
 
 //-------------------- Media Queries---------------------//
 @media screen and ( min-width: 320px ) {
@@ -74,12 +124,62 @@ $border-box: blue;
         display: inline;
         margin: auto;
     }
+
     .items {
         width: 300px;
         height: auto;
     }
+
+    .my-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-input {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .results {
+        columns: 2;
+        display: flex;
+        margin: auto;
+    }
+
+    .items {
+        width: 300px;
+        height: auto;
+    }
+
+    .my-form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .my-input {
+        width: 90px;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .results {
+        columns: 2;
+        display: inline;
+        margin: auto;
+    }
 
+    .items {
+        width: 300px;
+        height: auto;
+    }
+
+    .my-form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .my-input {
+        width: 175px;
+    }
 }
