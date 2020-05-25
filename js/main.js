@@ -1,8 +1,21 @@
+//-------------------Creating Variables-----------------------------//
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const resultsEl = document.getElementById('results');
 const searchNum = document.getElementById('search-num');
 
+//-----------------Restricting Text Input---------------------------//
+function lettersAndNumbersOnly(input) {
+    var regex = /[^a-z,0-9,-, ]/gi;
+    input.value = input.value.replace(regex, "");
+}
+
+function numbersOnly(input) {
+    var regex = /[^0-9]/g;
+    input.value = input.value.replace(regex, "");
+}
+
+//---------------------Event Listener-------------------------------//
 searchForm.addEventListener('submit', function(e) {
     e.preventDefault()
     const q = searchInput.value;
@@ -11,6 +24,7 @@ searchForm.addEventListener('submit', function(e) {
     
 });
 
+//-----------------Concantinating Dynamic URL-----------------------//
 function search(q, limit) {
     const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO";
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=${limit}`;
@@ -55,7 +69,7 @@ function search(q, limit) {
         resultsEl.innerHTML = resultsHTML
     })
 
-            // Showing I can write the function elsewhere and invoke it in the promis.
+            // Showing I can write the function elsewhere and invoke it in the promise.
 
         .catch( errorHandling )
         };
