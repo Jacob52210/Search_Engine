@@ -1,3 +1,8 @@
+.error {
+  text-align: center;
+  color: red;
+}
+
 .results {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,6 +36,11 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+}
+
+.my-input {
+  border: 1px solid blue;
+  margin: 5px;
 }
 
 .my-input:hover {

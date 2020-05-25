@@ -13,12 +13,21 @@
     align-items: center;
 }
 
-$nav-bg-color: lightblue;
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$nav-bg-color: rgba(173, 216, 230, 1);
 $box-shadow: rgba(0, 0, 0, 0.3);
 $border-box: blue;
 
 //----------------------- Styles ------------------------//
-
+.error {
+    text-align: center;
+    color: red;
+}
 
 .results {
     @include column-center();
@@ -41,7 +50,8 @@ $border-box: blue;
 }
 
 .my-input {
-    border: 2px ;
+    border: 1px solid blue ;
+    margin: 5px;
 }
 
 .my-input:hover {

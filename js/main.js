@@ -14,22 +14,29 @@ searchForm.addEventListener('submit', function(e) {
 function search(q, limit) {
     const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO";
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=${limit}`;
-    console.log(path);
+    
  //---------------------Error Handling------------------------------//
-   
+    function errorHandling() {
+        resultsEl.innerHTML = `
+            <h3 class="error">Error loading data, make sure your network is on.</h>
+        `;
+    }
 
  //---------------Fetching and Converting Data----------------------//
+
+            // Showing I can write functions inside a promise.
+        
     fetch(path)
         .then(function(res) {  
         return res.json()
     })
         .then(function(json) {
-            console.log(json.data[0].images.fixed_width.url)
+            
             
             let resultsHTML = ''
 
             json.data.forEach(function(obj) {
-                console.log(obj);
+                
 
                 const url =  obj.images.fixed_width.url
                 const width = obj.images.fixed_width.width
@@ -47,7 +54,8 @@ function search(q, limit) {
 
         resultsEl.innerHTML = resultsHTML
     })
-        .catch(function(err) {
-            console.log(err.message)
-        });
-};
+
+            // Showing I can write the function elsewhere and invoke it in the promis.
+
+        .catch( errorHandling )
+        };
