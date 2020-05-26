@@ -87,7 +87,7 @@ body {
 }
 
 .navbar {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.7);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
